@@ -1,0 +1,197 @@
+main {
+    background-image: url('../image/products/product-bg.jpg');
+    background-size: cover;
+    background-position: top center;
+}
+
+
+.product h1 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+/* =========================商品分類=========================== */
+
+.product .category {
+    /* outline: 2px solid yellow; */
+    display: flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+.product .category li {
+    /* outline: 2px solid yellow; */
+    background-color: transparent;
+    position: relative;
+    flex-grow: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.product .category li::after {
+    content: "/";
+    position: absolute;
+    top: 30%;
+    right: -5%;
+}
+
+.product .category li:last-child::after {
+    display: none;
+}
+
+.product .category li a {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+.product .category li a:hover::after,
+.product .category a.on::after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 5px;
+    background-color: rgba(65, 77, 62, 0.9);
+    ;
+    position: absolute;
+    bottom: 0;
+    left: 11%;
+    z-index: -1;
+}
+
+
+
+/* =========================商品=========================== */
+
+.allP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.allP li {
+    flex-basis: 28%;
+    background-color: rgba(144, 77, 64, 0.4);
+    margin: 0 15px 60px;
+}
+
+.allP li img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.allP li h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    height: 70px;
+}
+
+.allP li p {
+    margin-bottom: 15px;
+}
+
+.allP .select{
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1.2vw;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.allP li button {
+    display: block;
+    width: 100%;
+    line-height: 2;
+    font-size: 1.4vw;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #F4EFE6;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+}
+
+.allP li:hover {
+    transform: scale(1.02) translate(-8px);
+    background-color: rgba(144, 77, 64, 0.8);
+    box-shadow: 8px 5px 8px rgba(0, 0, 0, 0.25);
+}
+
+.allP li button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+@media screen and (max-width: 429px) {
+    .product h1 {
+        font-size: 2.5rem;
+        margin: 30px 0;
+    }
+
+    .product .category {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: scroll;
+        width: 95%;
+    }
+
+    .product .category li {
+        display: inline-block;
+    }
+
+    .product .category li::after {
+        font-size: 1.8rem;
+    }
+
+    .product .category li a {
+        font-size: 1.8rem;
+    }
+
+    .product .category li a:hover::after,
+    .product .category a.on::after {
+        width: 90%;
+        background-color: rgba(65, 77, 62, 1);
+        left: 4%;
+    }
+
+
+    /* =========================商品=========================== */
+
+    .allP li {
+        flex-basis: 45%;
+        margin: 0 0 60px;
+        padding: 5px;
+    }
+
+    .allP li h3 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+
+    .allP li p {
+        font-size: 1.3rem;
+    }
+
+    .allP li button {
+        font-size: 1.3rem;
+    }
+
+    .allP li:hover {
+        transform: scale(1.01) translate(-4px);
+    }
+
+    .allP .select{
+        font-size: 1.3rem;
+    }
+}

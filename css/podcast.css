@@ -1,0 +1,520 @@
+:root {
+    --swiper-pagination-bullet-inactive-color: white;
+    --swiper-pagination-color: #904D40;
+}
+
+/*------ 免責聲明  ------*/
+.warning {
+    background-image: url('../image/podcast/warning-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 200px 0;
+}
+
+.out {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.statement {
+    padding: 50px 80px;
+}
+
+.statement h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #F26246;
+}
+
+.statement p {
+    text-align: justify;
+}
+
+
+
+
+/*------ Listen on ------*/
+
+main {
+    background-color: #000;
+    background-image: url('../image/podcast/podcast-bg1.jpg');
+    background-size: contain;
+    background-position: center 300px;
+    background-repeat: no-repeat;
+}
+
+.listen {
+    padding: 100px 0;
+}
+
+.listen h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.listen ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.listen li {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.listen li a {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.listen li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-10px);
+}
+
+
+/*------ Player ------*/
+
+.player {
+    padding: 50px 30px 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-bottom: 100px;
+}
+
+.player:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.newest {
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.newest img {
+    width: 25%;
+    border-radius: 5px;
+    float: left;
+    margin-right: 5%;
+}
+
+.newest h2 {
+    font-size: 1.6vw;
+    font-weight: bold;
+    margin: 4% 0 6%;
+}
+
+audio {
+    width: 60%;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .play {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding: 0 1%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.play li:first-child {
+    font-size: 2.5vw;
+    margin-right: 1%;
+}
+
+.play li:nth-child(2) {
+    margin-right: 1%;
+}
+
+.play li:nth-child(4) {
+    width: 65%;
+    height: 2px;
+    background-color: #F4EFE6;
+    margin-left: -3%;
+    margin-right: 1%;
+    padding: 0;
+}
+
+.play li:last-child {
+    font-size: 2.5vw;
+} */
+
+.other-ep ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.other-ep ul:hover {
+    background-color: rgba(144, 77, 64, 0.25);
+    cursor: pointer;
+}
+
+.other-ep li {
+    flex-basis: 0;
+}
+
+.other-ep li:first-child {
+    flex-grow: 1;
+}
+
+.other-ep li:nth-child(2) {
+    flex-grow: 5;
+    margin: 0 1%;
+    font-weight: bold;
+    text-align: left;
+}
+
+.other-ep li:last-child {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.other-ep li img {
+    display: block;
+    width: 75%;
+    border-radius: 5px;
+}
+
+
+/*------ 喜歡的主題 ------*/
+
+.like {
+    padding: 80px 0;
+}
+
+.like h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tab {
+    /* outline: 2px snow solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab>ul {
+    /* outline: 5px solid blue; */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab>ul li {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+
+.tab>ul li button {
+    cursor: pointer;
+    color: #F4EFE6;
+    letter-spacing: 5px;
+    font-size: 1.2vw;
+    width: 70%;
+    line-height: 3;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.tab>ul li button.tabOn,
+.tab>ul li button:hover {
+    font-weight: bold;
+    background-color: rgba(144, 77, 64, 0.8);
+}
+
+.tab-content {
+    /* outline: 2px solid wheat; */
+    flex-basis: 70%;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #F4EFE6;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content:hover {
+    background-color: rgba(144, 77, 64, 0.5);
+}
+
+.content img {
+    width: 30%;
+    border-radius: 5px;
+    float: left;
+    margin-right: 6%;
+}
+
+.content h3 {
+    font-weight: bold;
+    margin: 7% 0 5%;
+    width: 95%;
+}
+
+/* .content .play {
+    width: 50%;
+}
+
+.content .play li {
+    padding: 0;
+}
+
+.content .play li:first-child,
+.content .play li:last-child {
+    font-size: 1.3vw;
+}
+
+.content .play li:nth-child(2),
+.content .play li:nth-child(3) {
+    font-size: 0.7vw;
+} */
+
+
+
+
+/*------------------------- 真實犯罪照片 ------------------------*/
+
+.real {
+    background-color: #000;
+    background-image: url('../image/podcast/podcast-bg2.jpg');
+    background-size: contain;
+    background-position: bottom 10px;
+    background-repeat: no-repeat;
+    padding: 150px 0;
+}
+
+.real h2 {
+    text-align: center;
+    margin: 50px 0 80px;
+}
+
+.real h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mySwiper {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 120px;
+}
+
+swiper-slide {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+swiper-slide:hover {
+    opacity: 1;
+}
+
+swiper-slide img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.real>a {
+    text-align: center;
+    width: 25%;
+    padding: 20px;
+    margin: 0 auto;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+}
+
+.real>a:hover {
+    border-bottom: 3px solid #F4EFE6;
+}
+
+@media screen and (max-width: 429px) {
+
+
+    /*------ 免責聲明  ------*/
+    .warning {
+        padding: 100px 0;
+    }
+
+    .statement {
+        padding: 10px 5px;
+    }
+
+    .statement h1 {
+        font-size: 1.5rem;
+    }
+
+    .statement p {
+        font-size: 1rem;
+    }
+
+
+    /*------ Listen on ------*/
+
+
+    .listen {
+        padding: 20px 0;
+    }
+
+    .listen h2 {
+        font-size: 1.5rem;
+    }
+
+    .listen ul {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+
+    .listen li {
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    .listen li a{
+        padding: 10px 15px;
+    }
+    /*------ Player ------*/
+
+
+    .player {
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 10px 5px;
+        margin-bottom: 0px;
+    }
+
+    .newest {
+        margin-bottom: 30px;
+    }
+
+    .newest h2 {
+        font-size: 1.1rem;
+    }
+
+    audio {
+        width: 60%;
+        height: 25px;
+    }
+
+    .other-ep h3,
+    .other-ep p {
+        font-size: 1rem;
+    }
+
+    .other-ep li {
+        padding: 5px;
+    }
+
+    .other-ep li:first-child {
+        flex-grow: 2;
+    }
+
+    .other-ep li img {
+        width: 100%;
+    }
+
+    /*------ 喜歡的主題 ------*/
+
+    .like {
+        padding: 20px 0;
+        overflow: hidden;
+    }
+
+    .tab {
+        flex-direction: column;
+    }
+
+    .tab>ul {
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .tab>ul li {
+        flex-basis: 0;
+        flex-grow: 1;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .like {
+        padding: 50px 0;
+    }
+
+    .like h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .tab>ul li button {
+        font-size: 1.2rem;
+    }
+
+    .content h3 {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+    /*------------------------- 真實犯罪照片 ------------------------*/
+
+    .real {
+        padding: 50px 0;
+        background-position: center 60px;
+    }
+
+    .real h2 {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+
+    .real h3 {
+        font-size: 1rem;
+    }
+
+    .mySwiper {
+        margin-bottom: 30px;
+    }
+
+    swiper-slide {
+        margin: 0 0 20px;
+        opacity: 1;
+    }
+
+    swiper-slide img {
+        width: 100%;
+        margin: 0 0px;
+    }
+
+    swiper-slide p {
+        font-size: 1rem;
+
+        letter-spacing: 1px;
+    }
+
+    .real>a {
+        font-size: 1rem;
+    }
+
+
+}

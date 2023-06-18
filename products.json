@@ -1,0 +1,63 @@
+[{
+    "productIMG":"prod1.jpg",
+    "title": "出塊二週年之磚紅色鳥媽媽鳥寶寶帽",
+    "price": 1380,
+    "category": "hatBag",
+    "order": 1
+},
+{
+    "productIMG":"prod2.jpg",
+    "title": "出塊帆布袋＋橄欖色鳥媽媽鳥寶寶帽組",
+    "price": 2250,
+    "category": "hatBag",
+    "order": 1
+},
+{
+    "productIMG":"prod3.jpg",
+    "title": "鵝！是雞掰狼！袋～",
+    "price": 790,
+    "category": "hatBag",
+    "order": 1
+},
+{
+    "productIMG":"prod4.jpg",
+    "title": "Y親手做的！純銀大麻葉小耳環 (單隻)",
+    "price": 1080,
+    "category": "accessories",
+    "order": 1
+},
+{
+    "productIMG":"prod5.jpg",
+    "title": "Y親手做的！純銀蘑菇小耳環！ (單隻)",
+    "price": 1080,
+    "category": "accessories",
+    "order": 1
+},
+{
+    "productIMG":"prod6.jpg",
+    "title": "Y親手做的！純銀惡魔O手耳環 (單隻)",
+    "price": 1280,
+    "category": "accessories",
+    "order": 1
+},
+{
+    "productIMG":"prod8.jpg",
+    "title": "一週年紀念！面罩雞掰郎漁夫帽雙帽組",
+    "price": 1380,
+    "category": "hatBag",
+    "order": 1
+},
+{
+    "productIMG":"prod9.jpg",
+    "title": "出塊手手踢！",
+    "price": 1080,
+    "category": "clothing",
+    "order": 1
+},
+{
+    "productIMG":"prod7.jpg",
+    "title": "出塊大麻蘑菇小音響-黑色",
+    "price": 1080,
+    "category": "accessories",
+    "order": 1
+}]

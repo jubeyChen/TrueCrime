@@ -1,0 +1,201 @@
+main {
+    background-image: url('../image/donate/donate-bg.jpg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #253032;
+}
+
+
+.donate h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* =============摺疊選單============= */
+.accordion {
+    width: 90%;
+    margin: 0 auto;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.accordion-control {
+    text-align: left;
+    font-size: 1.3vw;
+    font-family: 'Montserrat';
+    background-color: rgba(65, 77, 62, 0.8);
+    color: #f4f4f4;
+    border: none;
+    padding: 0.8em 1em;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    letter-spacing: 3px;
+    position: relative;
+    font-family: Verdana, sans-serif, '微軟正黑體';
+}
+
+.accordion-control i {
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    transition: all 0.5s;
+}
+
+.accordion-control i.arrow {
+    transform: rotate(180deg) translate(10%);
+}
+
+.accordion-panel {
+    padding: 5%;
+    background-color: rgba(65, 77, 62, 0.6);
+    color: #f4f4f4;
+    border-radius: 0 0 5px 5px;
+}
+
+
+.accordion-panel ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.accordion-panel ul li {
+    flex-basis: 0;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.accordion-panel ul button,
+.accordion-panel .confirm {
+    padding: 0;
+    display: block;
+    width: 100%;
+    line-height: 3;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 1.1vw;
+    font-family: Verdana, sans-serif, '微軟正黑體';
+}
+
+.accordion-panel ul button:hover,
+.accordion-panel .confirm:hover,
+.accordion-panel button.-on {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.accordion-panel .confirm {
+    width: 78%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+.accordion-panel p {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.accordion-panel #sel {
+    display: block;
+    width: 78%;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1vw;
+    letter-spacing: 3px;
+}
+
+.accordion-panel .byself {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-panel .byself input {
+    line-height: 3;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 1.1vw;
+    font-family: Verdana, sans-serif, '微軟正黑體';
+}
+
+.accordion-panel .ig {
+    width: 100%;
+}
+
+.ig li {
+    margin: 0 20px;
+}
+
+.ig li h3 {
+    text-align: center;
+}
+
+.ig li img {
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 8%;
+}
+
+@media screen and (max-width: 429px) {
+    .donate h1 {
+        font-size: 2rem;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+
+    .accordion-control {
+        font-size: 1.5rem;
+    }
+
+    .accordion-panel ul {
+        width: 100%;
+    }
+
+    .accordion-panel ul button,
+    .accordion-panel .confirm {
+        font-size: 1.5rem;
+    }
+
+    .accordion-panel .confirm {
+        width: 100%;
+    }
+
+    .accordion-panel #sel {
+        width: 95%;
+        font-size: 1.5rem;
+    }
+
+    .accordion-panel p {
+        font-size: 1.5rem;
+    }
+
+    .accordion-panel .byself input {
+        font-size: 1.5rem;
+    }
+
+    .ig li h3 {
+        font-size: 1.5rem;
+        height: 10px;
+        text-align: justify;
+    }
+
+    .accordion-panel .ig {
+        flex-direction: column;
+    }
+    .accordion-panel .ig li {
+        margin: 0 0 15px;
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/all.css">
+<!-- 瀏覽器頁籤放LOGO -->
+<link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/member.css">
+
+
+    <title>Member | 出塊True Crime</title>
+</head>
+
+<body>
+    <!-- 以下Header區域 -->
+    <header>
+    <nav class="main-block nav">
+
+        <a class="logo" href="index.html"></a>
+
+        <button id="navBurger"><i class="fa-solid fa-bars"></i></button>
+
+        <ul id="navList">
+            <li><a href="podcast.html" class="@@podcast">PODCAST</a></li>
+            <li><a href="products.html" class="@@product">PRODUCT</a></li>
+            <li><a href="donate.html" class="@@donate">DONATE</a></li>
+            <li><a href="link.html" class="@@links">LINKS</a></li>
+            <li><a href="member.html" class="active"><i class="fa-regular fa-user"></i></a></li>
+            <li><a href="cart.html" class="@@cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- 以下是top button -->
+    <button id="topBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- 以下可以開始編輯 -->
+    <div id="app">
+        <main v-if="!showMemberCenter">
+            <div class="main-block user">
+
+                <ul>
+                    <li>
+                        <h3 :class="{'-on': current_tab === 'login'}" @click="tab('login')">會員登入</h3>
+                    </li>
+                    <li>
+                        <h3 :class="{'-on': current_tab === 'register'}" @click="tab('register')">會員註冊</h3>
+                    </li>
+                </ul>
+
+                <div class="login" v-if="current_tab === 'login'">
+                    <div class="form">
+                        <label for="loginId">帳號</label>
+                        <input type="email" id="loginId" placeholder="測試帳號:123@gmail.com" v-model="login.email">
+
+                        <label for="loginPw">密碼</label>
+                        <input type="password" id="loginPw" placeholder="測試密碼:1234" v-model="login.password">
+
+                        <button type="button" @click="doLogin">登入</button>
+
+                        <h3>其他登入方式</h3>
+                        <button>使用Facebook登入</button>
+                        <button>使用Google登入</button>
+                    </div>
+                </div>
+
+                <div class="register" v-if="current_tab === 'register'">
+                    <div class="form">
+                        <label for="regId">帳號</label>
+                        <input type="email" id="regId" placeholder="請輸入Email註冊" v-model="register.email" @change="checkEmailValidity">
+                        <div v-if="!isValidEmail" class="errorMsg">請輸入有效的電子郵件地址。</div>
+
+                        <label for="regPw">密碼</label>
+                        <input type="password" id="regPw" placeholder="請輸入密碼" v-model="register.password">
+
+                        <label for="checkPw">再次確認密碼</label>
+                        <input type="password" id="checkPw" placeholder="請再次輸入密碼" v-model.lazy="register.checkPW" @change="PWCheck">
+                        <div v-if="!isPasswordMatch" class="errorMsg">您再次輸入的密碼不正確。</div>
+
+                        <button type="button">註冊</button>
+
+                        <h3>使用其他帳號註冊</h3>
+                        <button>使用Facebook註冊</button>
+                        <button>使用Google註冊</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- 以下Footer區域 -->
+    <footer>
+
+    <div class="main-block">
+
+        <div class="footer">
+
+            <a href="index.html"></a>
+
+
+            <div class="rest">
+
+                <ul>
+                    <li>
+                        <h3>聯絡我們</h3>
+                    </li>
+                    <li>truecrimetruecrime@gmail.com</li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h3>關注我們</h3>
+                    </li>
+                    <li><a href="https://www.facebook.com/truecrimetruecrime?locale=zh_TW" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/truecrimetruecrime/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://open.spotify.com/show/1IUqqLz028l4hG6ocHZ9IW?si=390cf145635249d7"
+                            target="_blank"><i class="fa-brands fa-spotify"></i></a></li>
+                    <li><a href="https://podcasts.apple.com/podcast/id1521769393?ign-itscg=30200&ign-itsct=lt_p"
+                            target="_blank"><i class="fa-solid fa-podcast"></i></a></li>
+                    <li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjkzMTc4NTI5Mi9zb3VuZHMucnNz"
+                            target="_blank"><i class="fa-brands fa-google"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p>本網站為緯育TibaMe前端工程師班THD101學員專題作品，本平台僅供學習、展示用（<a target="_blank" class="source" href="https://docs.google.com/document/d/1vfj0ZvOr6y3UcyxZRjrfwdv-r8iDLwQ-9PagBZvH9Rs/edit?usp=sharing">參考資料</a>）。</p>
+
+    </div>
+</footer>
+
+    <!-- 以下共用外接js區域 -->
+    <script src="js/vendors/vue.global.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/all.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+    <script src="js/member.js"></script>
+</body>
+
+</html>

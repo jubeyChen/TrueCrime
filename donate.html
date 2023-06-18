@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/all.css">
+<!-- 瀏覽器頁籤放LOGO -->
+<link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/donate.css">
+
+    <title>Donate | 出塊True Crime</title>
+</head>
+
+<body>
+    <!-- 以下Header區域 -->
+    <header>
+    <nav class="main-block nav">
+
+        <a class="logo" href="index.html"></a>
+
+        <button id="navBurger"><i class="fa-solid fa-bars"></i></button>
+
+        <ul id="navList">
+            <li><a href="podcast.html" class="@@podcast">PODCAST</a></li>
+            <li><a href="products.html" class="@@product">PRODUCT</a></li>
+            <li><a href="donate.html" class="active">DONATE</a></li>
+            <li><a href="link.html" class="@@links">LINKS</a></li>
+            <li><a href="member.html" class="@@member"><i class="fa-regular fa-user"></i></a></li>
+            <li><a href="cart.html" class="@@cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- 以下是top button -->
+    <button id="topBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    
+    <!-- 以下可以開始編輯 -->
+<div id="app">
+    <main>
+        <div class="main-block donate">
+            <h1>若乾媽乾爹財力有餘的話，可以選擇喜歡的方式抖內支持我們🧡</h1>
+
+            <ul class="accordion">
+                <li>
+                    <button class="accordion-control" @click="showDetail('month')">每月贊助 <i id="month" class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-panel" v-if="detail == 'month'">
+                        <ul>
+                            <li><button class="btn">每月NT$500</button></li>
+                            <li><button class="btn">每月NT$300</button></li>
+                            <li><button class="btn">每月NT$100</button></li>
+                        </ul>
+                        <button class="confirm">確認贊助</button>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="accordion-control" @click="showDetail('once')">單次贊助 <i id="once" class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-panel" v-if="detail == 'once'">
+                        <ul>
+                            <li><button class="btn">單次NT$500</button></li>
+                            <li><button class="btn">單次NT$300</button></li>
+                            <li><button class="btn">單次NT$100</button></li>
+                        </ul>
+                        <button class="confirm">確認贊助</button>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="accordion-control" @click="showDetail('self')">自訂金額贊助 <i id="self" class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-panel" v-if="detail == 'self'">
+                        <select id="sel">
+                            <option>每月贊助</option>
+                            <option>單次贊助</option>
+                        </select>
+
+                        <p>金額最低為NT$100</p>
+                        <ul class="byself">
+                            <li><input type="number" min="100" step="50" value="100" placeholder="請輸入金額"></li>
+                            <li><button>確認贊助</button></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="accordion-control" @click="showDetail('ig')">IG訂閱贊助 <i id="ig" class="fa-solid fa-chevron-down"></i></button>
+                    <div class="accordion-panel" v-if="detail == 'ig'">
+                        <ul class="ig">
+                            <li>
+                                <h3>1.進入IG頁面點選訂閱</h3>
+                                <img src="image/donate/subscribe1.jpg" alt="">
+                            </li>
+
+                            <li>
+                                <h3>2.點選訂閱即成功</h3>
+                                <img src="image/donate/subscribe2.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+</div>
+    <!-- 以下Footer區域 -->
+    <footer>
+
+    <div class="main-block">
+
+        <div class="footer">
+
+            <a href="index.html"></a>
+
+
+            <div class="rest">
+
+                <ul>
+                    <li>
+                        <h3>聯絡我們</h3>
+                    </li>
+                    <li>truecrimetruecrime@gmail.com</li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h3>關注我們</h3>
+                    </li>
+                    <li><a href="https://www.facebook.com/truecrimetruecrime?locale=zh_TW" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/truecrimetruecrime/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://open.spotify.com/show/1IUqqLz028l4hG6ocHZ9IW?si=390cf145635249d7"
+                            target="_blank"><i class="fa-brands fa-spotify"></i></a></li>
+                    <li><a href="https://podcasts.apple.com/podcast/id1521769393?ign-itscg=30200&ign-itsct=lt_p"
+                            target="_blank"><i class="fa-solid fa-podcast"></i></a></li>
+                    <li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjkzMTc4NTI5Mi9zb3VuZHMucnNz"
+                            target="_blank"><i class="fa-brands fa-google"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p>本網站為緯育TibaMe前端工程師班THD101學員專題作品，本平台僅供學習、展示用（<a target="_blank" class="source" href="https://docs.google.com/document/d/1vfj0ZvOr6y3UcyxZRjrfwdv-r8iDLwQ-9PagBZvH9Rs/edit?usp=sharing">參考資料</a>）。</p>
+
+    </div>
+</footer>
+    
+    <!-- 以下共用外接js區域 -->
+    <script src="js/vendors/vue.global.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/all.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+    <script src="js/donate.js"></script>
+</body>
+
+</html>

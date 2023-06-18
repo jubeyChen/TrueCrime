@@ -1,0 +1,218 @@
+main {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+main .main-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    box-sizing: border-box;
+    outline: 1px solid white;
+    padding: 50px 20px;
+    width: 75%;
+    border-radius: 5px;
+}
+
+.avatar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.avatar label {
+    background-color: #904D40;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.avatar button {
+    background-color: #904D40;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #f4efe6;
+    border: 0;
+    font-size: 1vw;
+}
+
+.imgBox {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 1vw;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#upload {
+    display: none;
+}
+
+.setting {
+    margin-top: 20px;
+}
+
+.setting li {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.setting li button {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1vw;
+    background-color: #904D40;
+    color: #f4efe6;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.setting li button:hover,
+.setting li button.active {
+    background-color: #f4efe6;
+    color: #904D40;
+}
+
+/* =====================帳號設定======================= */
+
+.account h3 {
+    margin-bottom: 50px;
+}
+
+.account .form {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.account .form input,
+.account .form select {
+    padding: 8px;
+    font-size: 1vw;
+    margin-bottom: 15px;
+}
+
+.account .form button {
+    margin-top: 20px;
+    padding: 8px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1vw;
+}
+
+.account .form button:hover {
+    background-color: #904D40;
+    color: #f4efe6;
+    cursor: pointer;
+}
+
+
+/* =====================訂單管理======================= */
+.orderH3 {
+    margin-bottom: 50px;
+}
+
+.order li {
+    background-color: #904D40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 20px;
+}
+
+div.img {
+    width: 150px;
+    height: 150px;
+}
+
+div.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order li .title {
+    flex-basis: 40%;
+}
+
+
+@media screen and (max-width: 429px) {
+    main .main-block {
+        flex-direction: column;
+    }
+
+    .avatar label,
+    .avatar button {
+        font-size: 1.5rem;
+    }
+
+    .setting li {
+        margin-bottom: 10px;
+    }
+
+    .setting li button {
+        font-size: 1.5rem;
+    }
+
+    section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .orderH3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .account h3 {
+        font-size: 1.5rem;
+    }
+
+    .account .form {
+        width: 90%;
+    }
+
+    .account h3 {
+        margin-bottom: 20px;
+    }
+
+    .account .form input,
+    .account .form label,
+    .account .form select,
+    .account .form button {
+        font-size: 1.5rem;
+    }
+
+    .order li{
+        flex-direction: column;
+    }
+
+    div.img{
+        margin-bottom: 10px;
+    }
+
+    .order li .title{
+        font-size: 1.5rem;
+        text-align: justify;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .order li .orderNum, 
+    .order li .total{
+font-size: 1.5rem;
+    }
+}
