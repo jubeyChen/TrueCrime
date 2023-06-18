@@ -28,6 +28,10 @@ main h1 {
     flex-grow: 1;
 }
 
+.cart li:nth-child(3){
+    text-align: center;
+}
+
 .cart li:last-child {
     font: 100px;
     margin-right: 2%;
